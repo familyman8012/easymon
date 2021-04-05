@@ -1,0 +1,29 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="146px" height="145px">
+<defs>
+<filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="146px" height="145px"  >
+    <feOffset in="SourceAlpha" dx="0" dy="0" />
+    <feGaussianBlur result="blurOut" stdDeviation="4.583" />
+    <feFlood flood-color="rgb(13, 0, 71)" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="blurOut" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.24"/></feComponentTransfer>
+    <feMerge>
+    <feMergeNode/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+<linearGradient id="PSgrad_0" x1="0%" x2="46.947%" y1="88.295%" y2="0%">
+  <stop offset="0%" stop-color="rgb(166,122,255)" stop-opacity="1" />
+  <stop offset="100%" stop-color="rgb(113,92,211)" stop-opacity="1" />
+</linearGradient>
+
+</defs>
+<g filter="url(#Filter_0)">
+<path fill-rule="evenodd"  fill="url(#PSgrad_0)"
+ d="M38.031,22.000 L106.031,22.000 C114.868,22.000 122.031,29.163 122.031,38.000 L122.031,106.000 C122.031,114.836 114.868,122.000 106.031,122.000 L38.031,122.000 C29.195,122.000 22.031,114.836 22.031,106.000 L22.031,38.000 C22.031,29.163 29.195,22.000 38.031,22.000 Z"/>
+</g>
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M95.333,44.000 L95.333,51.000 L90.667,51.000 L90.667,44.000 L53.333,44.000 L53.333,51.000 L48.667,51.000 L48.667,44.000 L44.000,44.000 L44.000,100.000 L48.667,100.000 L48.667,93.000 L53.333,93.000 L53.333,100.000 L90.667,100.000 L90.667,93.000 L95.333,93.000 L95.333,100.000 L100.000,100.000 L100.000,44.000 L95.333,44.000 ZM95.333,55.667 L95.333,60.333 L90.667,60.333 L90.667,55.667 L95.333,55.667 ZM90.667,74.333 L95.333,74.333 L95.333,79.000 L90.667,79.000 L90.667,74.333 ZM90.667,69.667 L90.667,65.000 L95.333,65.000 L95.333,69.667 L90.667,69.667 ZM86.000,48.667 L86.000,69.667 L58.000,69.667 L58.000,48.667 L86.000,48.667 ZM48.667,69.667 L48.667,65.000 L53.333,65.000 L53.333,69.667 L48.667,69.667 ZM53.333,74.333 L53.333,79.000 L48.667,79.000 L48.667,74.333 L53.333,74.333 ZM53.333,55.667 L53.333,60.333 L48.667,60.333 L48.667,55.667 L53.333,55.667 ZM48.667,88.333 L48.667,83.666 L53.333,83.666 L53.333,88.333 L48.667,88.333 ZM58.000,95.333 L58.000,74.333 L86.000,74.333 L86.000,95.333 L58.000,95.333 ZM90.667,88.333 L90.667,83.666 L95.333,83.666 L95.333,88.333 L90.667,88.333 Z"/>
+</svg>

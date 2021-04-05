@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./webicon/uicons-regular-straight/css/uicons-regular-straight.css">
+    <title>easymon</title>
+</head>
+
+<body>
+    <div class="wrap_app wrap_recommed_list">
+        <section class="section_top">
+            <div class="wrap_head">
+                <h1>추천인 목록</h1>
+            </div>
+            <div class="toggleWrapper">
+                <input type="checkbox" id="dn" class="dn">
+                <label for="dn" class="toggle"><span class="toggle__handler"></span></label>
+            </div>
+            <div class="box_search_member">
+                <input type="text" name="inp" class="inp" placeholder="회원 검색" />
+                <span class="btn"><i class="blind">검색</i></span>
+            </div>            
+        </section>
+        <section class="section_container">
+            <span class="info_total_member">총 123,238명</span>
+            <ul class="list">
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>   
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>   
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+                <li>
+                    <span class="user_account">
+                        <span class="name">이지몬</span>
+                        <span class="email">easymon123@naver.com</span>
+                    </span>
+                    <span class="user_lv">
+                        시니어 Lv.5
+                    </span>
+                </li>
+            </ul>
+        </section>
+        <nav class="bottom_menu">
+            <ul class="list">
+                <li>
+                    <a href="#">매거진</a>
+                </li>
+                <li>
+                    <a href="#">마이오피스</a>
+                </li>
+                <li>
+                    <a href="#">멤버</a>
+                </li>
+                <li>
+                    <a href="#">추천인 목록</a>
+                </li>
+                <li>
+                    <a href="#">로또</a>
+                </li>
+            </ul>
+        </nav>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            $(function () {
+                var $percentGage = $('.percentage').text().slice(0, -1) + ',' + '100';
+                $('.circular-chart .circle').attr('stroke-dasharray', $percentGage);
+            })
+        </script>
+    </div>
+</body>
+
+</html>

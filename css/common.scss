@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+  line-height: 1.4;
+  font-family: '본고딕', "APPLE SD Gothic NEO", "Noto Sans CJK KR",  sans-serif;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%; }
+
+body.onPopup {
+  overflow: hidden; }
+  body.onPopup #app {
+    position: fixed; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, em, figure, figcaption, address {
+  padding: 0;
+  margin: 0;
+  font: inherit; }
+
+ul, ol {
+  list-style: none; }
+
+
+
+html, body, #app {
+  min-width: 320px;
+  }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+img {
+  vertical-align: top; }
+
+/* === common === */
+html {
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.5;
+  width: 100%;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: 0;
+  color: #333333; }
+
+em {
+  font-style: normal; }
+
+caption, legend {
+  color: transparent;
+  font: 0/0 arial;
+  text-shadow: none; }
+
+img {
+  display:block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline; }
+
+::-webkit-input-placeholder {
+  color: #cccccc;
+  font-size: 1em; }
+
+::-moz-placeholder {
+  color: #cccccc; }
+
+:-ms-input-placeholder {
+  color: #cccccc; }
+
+:-moz-placeholder {
+  color: #cccccc; }
+
+.hiddenZone {display:none;}
+.hiddenZoneV {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;*visibility:hidden;}
+ @mixin backCover($arg1) {
+    background:url($arg1) no-repeat left top;background-size:cover;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+@font-face {
+  font-family: '본고딕';
+  font-style : normal;
+  font-weight: 500;
+  src        : local('NotoSansKR-Medium'), local('NotoSansKR-Medium');
+  src        : url('../fonts/NotoSansKR-Medium.eot'),
+    /* IE9 Compat Modes */
+    url('../fonts/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/NotoSansKR-Medium.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansKR-Medium.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NotoSansKR-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: '본고딕';
+    font-style: normal;
+    font-weight: 400;
+    src: local('NotoSansKR-Regular'), local('NotoSansKR-Regular');
+    src: url('../fonts/NotoSansKR-Regular.eot'), /* IE9 Compat Modes */
+    url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/NotoSansKR-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/NotoSansKR-Regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/NotoSansKR-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: '본고딕';
+  font-style : normal;
+  font-weight: 300;
+  src        : local('NotoSansKR-Light'), local('NotoSansKR-Light');
+  src        : url('../fonts/NotoSansKR-Light.eot'),
+    /* IE9 Compat Modes */
+    url('../fonts/NotoSansKR-Light.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansKR-Light.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NotoSansKR-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: '본고딕';
+  font-style : normal;
+  font-weight: 350;
+  src        : local('NotoSansKR-DemiLight'), local('NotoSansKR-DemiLight');
+  src        : url('../fonts/NotoSansKR-DemiLight.eot'),
+    /* IE9 Compat Modes */
+    url('../fonts/NotoSansKR-DemiLight.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansKR-DemiLight.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NotoSansKR-DemiLight.otf') format('truetype');
+}
+
+@font-face {
+  font-family: '본고딕';
+  font-style : normal;
+  font-weight: 900;
+  src        : url('../fonts/NotoSansKR-Bold.eot');
+  /* IE9 Compat Modes */
+  src        : url('../fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/NotoSansKR-Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/NotoSansKR-Bold.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/NotoSansKR-Bold.otf') format('truetype');
+}
+
+
+
+/* 커스텀체크박스 */
+@mixin checkbox($arg1 : '../images/custom_chk.png', $arg2: '../images/custom_chk_on.png', $arg3:3rem,  $arg4:3.8rem) {
+  input[type=checkbox] { display:none; }
+  input[type=checkbox] + label { 
+    display: inline-block;cursor: pointer;line-height: $arg3;padding-left: $arg4; 
+    background: url($arg1) left/$arg3 no-repeat;color:#fff;font-size:2rem;
+  }
+  input[type=checkbox]:checked + label { background-image: url($arg2); }
+}
+@mixin bg($arg1, $arg2:'left', $arg3:'top') {
+  background : url($arg1) no-repeat $arg2 $arg3;
+}
+
+@mixin whiteBox($arg1, $arg2) {
+  width:$arg1;height:$arg2;color:#1a1a1a;background:#fff;
+}
+
+@mixin btn($width, $height, $fontSize, $bgcolor) {
+  width:$width;height:$height;margin:0 auto;line-height:$height;font-size:$fontSize;color:#fff;text-align:center;
+  cursor:pointer;border-radius:8px;background:$bgcolor;
+}
+
+
+%centerpop {
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}

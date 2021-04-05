@@ -1,0 +1,153 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {background:#fff;}
+*, :after, :before {
+    /* -webkit-box-sizing: border-box; */
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul, dl {margin:0;padding:0;}
+li {list-style:none;}
+
+.gnb_oparea li a {font-size: 12px; font-family: 'Malgun Gothic',"맑은 고딕",AppleGothic,Dotum,"돋움", sans-serif;}
+
+.wrap_kCalendar {width: 1219px;margin:0 auto;}
+.wrap_kCalendar ul {overflow:hidden;}
+.wrap_kCalendar ul li {float:left;margin:0 0 0 50px;font-size:12px;}
+.wrap_kCalendar ul li:first-child {margin-left:0;}
+.wrap_kCalendar ul li:before {margin-right:3px;}
+#kCalendar {position: relative; width: 1219px;  margin: 0px auto;overflow: hidden;}
+
+
+#kCalendar #header {height: 50px;margin-top:5px;line-height: 50px; text-align: center; font-size: 18px; font-weight: bold}
+#kCalendar .button {position:relative;top:3px;display:inline-block;width:10px;height:19px;text-decoration: none; margin:0 17px}
+#kCalendar .button.left {background:url('http://kip.company/adm/img/arrow_prev_cal.svg') no-repeat left top;}
+#kCalendar .button.right {background:url('http://kip.company/adm/img/arrow_next_cal.svg') no-repeat left top;}
+#kCalendar table {width: 100%; margin:9px 0;border-spacing:0px; border:none;;border-collapse:collapse;}
+#kCalendar table th, #kCalendar table td {padding:0px;border:1px solid#a67aff;}
+#kCalendar table th {height: 40px;color:#000;font-size: 12px;color:#fff;font-weight:normal;background-color: #a67aff;}
+#kCalendar table td {position:relative;color:#828282;vertical-align: top;background:#fff;}
+#kCalendar table td.fin_check {background:url('../images/ico_td_check.png') no-repeat center;background-size:28px 20px;}
+#kCalendar caption {display: none;}
+#kCalendar table td{width:14.28%; height:110px;padding:17px 20px;font-size:12px;text-align: left; }
+
+#kCalendar .box > .box1, #kCalendar .box > .box2, #kCalendar .box > .box3, #kCalendar .box > .box4, #kCalendar .box > .box5 {border-radius: 3px; line-height:18px; width: 37%; text-align: center; float: left; color:#fff;}
+.box1 { background:#1bb934;}
+/*{ background:#1bb934; float: left}*/
+.box2 {background:#f2a80a;}
+.box3 {background:#fc565e;}
+.box4 {background:#2c89cc;}
+.box5 {background:#384053;}
+.box_wrap {margin-top:8px}
+.box {margin-bottom: 5px; padding:0}
+
+
+#date {float:none;width:auto;}
+
+
+
+
+
+.label_confirmed {position:absolute;top:17px;left:45px;width:101px;height:22px;line-height:22px;color:#fff;font-size:12px;text-align:center;background:#75b32c;border-radius:10px;}
+.total_money:before {content:'';display:inline-block;position:relative;top:2px;width:14px;height:14px;margin-right:9px;border:1px solid #969696;border-radius:7px;background-color: #fff;}
+.schedule_money:before {content:'';display:inline-block;position:relative;top:2px;width:14px;height:14px;margin-right:9px;border:1px solid #0066ff;border-radius:7px;background-color: #0066ff;}
+.complete_money:before {content:'';display:inline-block;position:relative;top:2px;width:14px;height:14px;margin-right:9px;border:1px solid #cf4141;border-radius:7px;background-color: #cf4141;}
+.cancel_money:before {content:'';display:inline-block;position:relative;top:2px;width:14px;height:14px;margin-right:9px;border:1px solid #969696;border-radius:7px;background-color: #969696;}
+
+.total_money {cursor:pointer;}
+.schedule_money, .complete_money {margin-top:8px;cursor:pointer;}
+.schedule_money {color:#0066ff;}
+.complete_money {color:#cf4141;}
+.cancel_money {color:#969696;}
+
+.date_num div:first-child {margin-top:15px;}
+.total_money_mt {margin-top:17px !important;}
+
+.calenBody td.on {background: #eef5ff}
+
+.wrap_kCalendar {position:relative;}
+.wrap_kCalendar .list_state {padding-top:11px;}
+.wrap_search_form {position:absolute;top:0;right:0;width:175px;height:41px;border:1px solid #ddd;z-index:300;     box-sizing: border-box;
+    padding: 0px 0 0 7px;}
+.wrap_search_form select {border:none;font-size:12px;}
+.btn_search_cal {width:22px;height:24px;margin-left:40px;background:url('../img/btn_search_cal.png') no-repeat left top;text-indent:-9999px;}
+#kCalendar_pop {display:none;position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);z-index:500;}
+.mask_cal {display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:400;}
+
+
+
+.loading_msg.on {visibility: visible; opacity: 1;}
+.loading_msg {visibility: hidden; opacity: 0; position: absolute; top:0; left: 0; right: 0; bottom: 0; padding-top: 10%; background: rgba(255,255,255,0.7); text-align: center; transition: all 0.5s ease-in-out}
+.loading_msg .loading_logo_img {display: block; margin: 0 auto; width: 15%}
+.loading_msg .loading_img {width: 17%; margin-top: -30px}
+.loading_msg p {margin-top: 60px; font-size: 1.3rem; font-weight: bold; line-height: 2rem; color: #333}
+.loading_msg p + p {margin-top: 160px}
+.loading_msg .vmp_slogan {position: absolute; left: 50%; margin-left: -119.5px; font-family: 'Noto Serif KR', serif; color: #1e599e; animation: sloganPop 1.5s ease-in-out  }
+
+.wrap_write_money {width:520px;background:#fff;}
+.list_cal_write {display:flex;}
+.list_cal_write li {width:50%;height:49px;font-size:20px;text-align:center;line-height:49px;color:#939393;background:#ddd;font-family: NotoSansCJKkr;font-weight:bold;cursor:pointer;}
+.list_cal_write li.on {height:59px;margin-top:-10px;color:#000;line-height:59px;border:1px solid #dedede;border-bottom:none;background:#fff}
+
+.wrap_write_money dl {display:flex;width:440px;height:79px;margin:0 auto;padding:0 3px 0 9px;align-items:center;border-bottom:1px solid #dedede;}
+.wrap_write_money dt {float:left;font-size:14px;font-weight:bold;}
+.wrap_write_money dd {float:right;margin-left:auto;}
+
+.wrap_write_money select {width:75px;height:34px;margin:0 4px 0 17px;border:1px solid #ddd;text-align:center;}
+.wrap_write_money .select_year select {width:90px;margin-left:0;}
+.wrap_write_money input {width:190px;height:34px;padding:0 11px;border:1px solid #ddd;text-align:right;}
+.wrap_select {font-size:14px;font-weight:bold;}
+.wrap_write_money .cont {display:none;border:1px solid #dedede;border-top:none;}
+.wrap_write_money .cont.on {display:block;}
+.btn_amount {width:440px;height:50px;margin:20px auto;color:#fff;line-height:50px;font-size:20px;font-weight:bold;text-align:center;cursor:pointer;background-color: #b95a5a;}
+
+
+@keyframes sloganPop { 0% { opacity: 0; margin-top: 10%} 50% { opacity: 0.5s } 100% { opacity: 1; margin-top: 60px}}
+
+@media (min-width: 481px) and (max-width: 767px){
+    .loading_msg .vmp_slogan {margin-left: -92px}
+    .loading_msg .loading_logo_img {width: 90px;}
+    .loading_msg p {font-size: 1rem}
+    .loading_msg .loading_img {width: 150px}
+
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .loading_msg {padding-top: 30%}
+    .loading_msg .vmp_slogan {margin-left: -92px}
+    .loading_msg p { font-size: 1rem; }
+    .loading_msg .loading_logo_img {width: 100px;}
+    .loading_msg .loading_img {margin-top: 0; width: 130px;}
+    .loading_msg p + p {margin-top: 135px}
+}
+
+
+
+@media (max-width: 801px) {
+	.wrap_kCalendar {width:100%;}
+    .label_confirmed {position:static;width:auto;}
+    #kCalendar {width: 100%;  margin: 0px auto; overflow: hidden;}
+    #kCalendar table{width:100%; margin:5px 0 0;}
+    #kCalendar table th{font-size:8px !important;}
+    #kCalendar table td{position:relative;width:45px;height:45px; font-size:8px !important;}
+    #kCalendar table td img {position:absolute;top:50%;left:50%;width:28px;height:33px;transform:translate(-50%,-50%); }
+    .box{margin:0;}
+    #kCalendar .box > .box1, #kCalendar .box > .box2, #kCalendar .box > .box3,#kCalendar .box > .box4, #kCalendar .box > .box3,#kCalendar .box > .box5 {height:auto; line-height:11px; padding:0 3px;}
+    #kCalendar table td {padding:9px 0 0 6px;}
+    
+        
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+
+
+.table_wrap table {word-break: keep-all}
+.table_wrap table tbody th {width: 16%}
+.table_wrap table tbody td > input[type="text"] {width: 100%}
+
+#kCalendar .box_wrap .box li {display: block; text-align: left;}
+#kCalendar .box_wrap .box li:first-child {width: 72%; text-align: center;}
+
+}
